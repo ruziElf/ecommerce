@@ -2,17 +2,22 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage  from './pages/Homepage';
 import Auth from './pages/Auth';
 import Checkout from './pages/Checkout';
-
-import './App.css'
+import Navbar from './components/NavigationBar';
+import './App.css';
 
 function App() {
 
   return (
+    <>
+    <Navbar/>
     <Routes>
       <Route path="/" element={<HomePage/>}></Route>
       <Route path="auth" element={<Auth/>}></Route>
       <Route path="checkout" element={<Checkout/>}></Route>
+      
     </Routes>
+
+    </>
   );
 }
 
